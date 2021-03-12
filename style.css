@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --fontFamily: 'Lato', sans-serif;
+    --fontSize: 16px;
+    --colorWhite: #fff;
+    --colorBlack: #000;
+    --lightGray: lightgray;
+    --padding: 70px;
+    --transition: .3 ease;
+
+}
+
+/*************
+ *************
+ basic styles
+ *************
+ *************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    border: 2px solid var(--colorWhite);
+    background: transparent;
+    color: var(--white);
+    padding: 10px 25px;
+    margin-top: 35px;
+    font-size: .9rem;
+    border-radius: 10px;
+
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, .4);
+    transition: var(--transition);
+    cursor: pointer;
+
+
+}
+
+/*************
+ *************
+    header
+ *************
+ *************/
+
+header {
+    background-image: url(img/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 30px;
+
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: var(--lightGray);
+    margin-left: 25px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+header nav ul li a:hover {
+    color: var(--colorWhite);
+    transition: var(--transition);
+    cursor: pointer;
+
+}
+
+header .active {
+    color: var(--colorWhite);
+    font-weight: 400;
+    border: 1px solid var(--colorWhite);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+header .active:hover {
+    color: var(--lightGray);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+header .logo {
+    color: var(--colorWhite);
+    font-size: 3rem;
+}
+
+header hgroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorWhite);
+    margin-top: 20px;
+}
+
+header hgroup h1 {
+    font-size: 3rem;
+}
+
+header hgroup h3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--lightGray);
+}
+
+/*************
+ *************
+    about
+ *************
+ *************/
+
+.about {
+    padding: var(--padding);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+}
+
+.about h5 {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.about .row {
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about .row article {
+    flex: 0 0 31%;
+}
+
+.about .row article a {
+    color: var(--colorBlack);
+    font-size: 2rem;
+}
+
+.about .row article p {
+    color: Gray;
+    font-size: .9rem;
+    margin-top: 30px;
+}
+
+.about .row button {
+    font-weight: 400;
+    border-radius: 10px;
+    border: 2px solid var(--colorBlack);
+    font-size: .8rem;
+}
+
+/*************
+ *************
+    footer
+ *************
+ *************/
+
+
+footer {
+    padding: var(--padding);
+    text-align: center;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+}
+
+footer h2 {
+    font-size: 2rem;
+}
+
+
+footer h5 {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+footer h5 + p {
+    margin-top: 50px;
+    color: gray;
+    font-size: .9rem;
+}
+
+footer button + p {
+    margin-top: 50px;
+    color: gray;
+    font-size: .9rem;
+
+}
+
+footer span {
+    color: var(--lightGray);
+}
+
+footer .btn:hover {
+    transition: var(--transition);
+    cursor: pointer;
+    background: rgba(255, 255, 255, .1);
+
+
+}
+
+/*************
+ *************
+    responsive
+ *************
+ *************/
+
+@media(max-width: 768px) {
+
+
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo {
+
+        font-size: 2rem;
+
+    }
+
+    header nav ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    header nav ul li a {
+
+        margin-left: 10px;
+        font-size: .8rem;
+
+    }
+
+    header hgroup h1 {
+        font-size: 2rem;
+    }
+
+    header hgroup h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about h5 {
+
+        font-size: 1.1rem;
+        margin-top: 20px;
+
+    }
+
+    .about .row article {
+        flex: 0 0 100%;
+        margin-top: 20px;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+    }
+
+    footer h5 {
+
+        font-size: 1.1rem;
+
+    }
+
+
+}
